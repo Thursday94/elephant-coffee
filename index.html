@@ -1,223 +1,388 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 
 <head>
-    <meta charset="utf-8" />
-    <title>Elephant Coffee — Rzemieślnicza palarnia kawy w Słubicach</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elephant Coffee — Rzemieślnicza palarnia kawy ze Słubic</title>
     <meta name="description"
-        content="Elephant Coffee to rzemieślnicza palarnia kawy ze Słubic. Świeżo palone ziarna, małe wypały, drip-bagi i zestawy degustacyjne." />
-    <!-- потом подключишь свой styles.css -->
-    <link rel="stylesheet" href="./css/styles.css" />
+        content="Elephant Coffee — mała rzemieślnicza palarnia kawy ze Słubic. Świeżo palone ziarna, małe partie, indywidualne zamówienia. Zamów świeżą kawę prosto od palarni.">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
 
-    <div class="page">
+    <!-- HEADER / NAV -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#home" class="logo">
+                <span class="logo__mark">Elephant</span>
+                <span class="logo__text">Coffee</span>
+            </a>
 
-        <!-- HEADER / NAV -->
-        <header class="site-header">
-            <div class="container header__inner">
-                <a href="#top" class="logo">
-                    <div class="logo__mark">
-                        <!-- тут твой логотип -->
-                        <img src="./img/logo.jpg" alt="Elephant Coffee logo" />
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link">O nas</a></li>
+                    <li class="nav__item"><a href="#coffee" class="nav__link">Kawa</a></li>
+                    <li class="nav__item"><a href="#order" class="nav__link">Jak zamówić</a></li>
+                    <li class="nav__item"><a href="#reviews" class="nav__link">Opinie</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link nav__link--cta">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <button class="nav-toggle" aria-label="Otwórz menu">
+                <span class="nav-toggle__line"></span>
+                <span class="nav-toggle__line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="home">
+
+        <!-- HERO -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero__inner">
+                <div class="hero__content">
+                    <h1 class="hero__title" id="hero-title">
+                        Świeżo palona kawa<br>rzemieślnicza ze Słubic
+                    </h1>
+                    <p class="hero__subtitle">
+                        Mała, niezależna palarnia kawy, w której każde ziarno przechodzi przez nasze ręce.
+                        Palimy w małych partiach, na zamówienie – zawsze świeżo, zawsze z troską o smak.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#order" class="btn btn--primary">Zamów kawę</a>
+                        <a href="#coffee" class="btn btn--ghost">Poznaj nasze mieszanki</a>
                     </div>
-                    <div class="logo__text">
-                        <span class="logo__brand">Elephant Coffee</span>
-                        <span class="logo__tagline">Palarnia kawy • Słubice</span>
-                    </div>
-                </a>
+                    <p class="hero__note">
+                        Świeże wypały: <span>co tydzień, w małych partiach</span>
+                    </p>
+                </div>
 
-                <button class="nav-toggle" aria-label="Otwórz menu">
-                    <span></span>
-                </button>
+                <div class="hero__photo">
+                    <!-- Тут потом вставишь своё фото/визуал -->
+                    <a href="#" class="hero__logo-link">
+                        <img src="./img/logo.jpg" alt="Logo Elepant Coffee" width="300" height="300">
+                    </a>
+                </div>
+            </div>
+        </section>
 
-                <nav class="main-nav">
-                    <ul class="nav__list">
-                        <li><a href="#onas" class="nav__link">O nas</a></li>
-                        <li><a href="#kawy" class="nav__link">Nasze kawy</a></li>
-                        <li><a href="#zamow" class="nav__link">Zamów</a></li>
-                        <li><a href="#allegro" class="nav__link">Zamów na Allegro</a></li>
-                        <li><a href="#gra" class="nav__link">Graj i łap słonie!</a></li>
+        <!-- ABOUT -->
+        <section class="section section--about" id="about">
+            <div class="container section__inner section__inner--split">
+                <div class="section__content">
+                    <h2 class="section__title">Kim jesteśmy</h2>
+                    <p class="section__text">
+                        Elephant Coffee to domowa, rzemieślnicza palarnia kawy ze Słubic,
+                        stworzona z miłości do dobrego, uczciwego espresso i kawy przelewowej.
+                    </p>
+                    <p class="section__text">
+                        Palimy kawę w małych partiach, dzięki czemu możemy kontrolować każdy etap:
+                        od wyboru zielonych ziaren, przez profil palenia, aż po odpoczynek kawy i pakowanie.
+                        Każde zamówienie przygotowujemy indywidualnie – dokładnie tak, jak lubisz.
+                    </p>
+                    <p class="section__text">
+                        Współpracujemy z lokalnymi klientami ze Słubic i okolic oraz wysyłamy kawę na terenie Polski.
+                    </p>
+                </div>
+
+                <div class="section__aside">
+                    <ul class="feature-list">
+                        <li class="feature-list__item">
+                            <h3 class="feature-list__title">Świeże wypały</h3>
+                            <p class="feature-list__text">
+                                Kawa palona na kilka dni przed dostawą, z czasem na spokojną degazację.
+                            </p>
+                        </li>
+                        <li class="feature-list__item">
+                            <h3 class="feature-list__title">Małe partie</h3>
+                            <p class="feature-list__text">
+                                Każdy profil dopracowujemy ręcznie, pod konkretne metody parzenia.
+                            </p>
+                        </li>
+                        <li class="feature-list__item">
+                            <h3 class="feature-list__title">Indywidualne mielenie</h3>
+                            <p class="feature-list__text">
+                                Mielimy kawę pod ekspres, kawiarkę, przelew, French press lub tygielek – jeśli tego
+                                potrzebujesz.
+                            </p>
+                        </li>
                     </ul>
-                    <a href="#zamow" class="btn btn--nav-cta">Zamów kawę</a>
-                </nav>
+                </div>
             </div>
-        </header>
+        </section>
 
-        <!-- MAIN -->
-        <main id="top">
+        <!-- COFFEE / OFFER -->
+        <section class="section section--coffee" id="coffee">
+            <div class="container">
+                <header class="section__header">
+                    <h2 class="section__title">Nasza kawa</h2>
+                    <p class="section__subtitle">
+                        Trzy linie smakowe, które tworzą serce Elephant Coffee. Idealne do ekspresu, kawiarki i metod
+                        alternatywnych.
+                    </p>
+                </header>
 
-            <!-- HERO -->
-            <section class="hero" aria-labelledby="hero-title">
-                <div class="container hero__inner">
-                    <div class="hero__content">
-                        <p class="hero__eyebrow">Rzemieślnicza palarnia kawy</p>
-                        <h1 class="hero__title" id="hero-title">
-                            Elephant Coffee
-                        </h1>
-                        <p class="hero__subtitle">
-                            Świeżo palona kawa z serca Słubic. Małe wypały, powtarzalna jakość i aromaty,
-                            które chcesz pić codziennie — w domu, w biurze i z gośćmi.
-                        </p>
-
-                        <div class="hero__actions">
-                            <a href="#zamow" class="btn btn--primary">Zamów świeżą kawę</a>
-                            <a href="#kawy" class="btn btn--ghost">Zobacz nasze kawy</a>
-                        </div>
-
-                        <p class="hero__note">
-                            Palimy na zamówienie — kawa potrzebuje kilku dni na odpoczynek po wypale,
-                            aby trafić do Ciebie w idealnym momencie.
-                        </p>
-                    </div>
-
-                    <div class="hero__visual">
-                        <div class="hero-logo">
-                            <img src="./img/logo.jpg" alt="Elephant Coffee — logo palarni" />
-                        </div>
-                    </div>
+                <div class="cards">
+                    <article class="card">
+                        <h3 class="card__title">Elephant Classic</h3>
+                        <p class="card__tag">Brazylia • Espresso & Kawiarka</p>
+                        <p class="card__text">Klasyczna, czekoladowo-orzechowa kawa...</p>
+                        <ul class="card__list">
+                            <li>Profil: czekolada, orzechy</li>
+                            <li>Idealna do espresso</li>
+                            <li>250 g / 500 g / 1 kg</li>
+                        </ul>
+                    </article>
+                
+                    <article class="card">
+                        <h3 class="card__title">Elephant Balance</h3>
+                        <p class="card__tag">Blend Brazylii i Indii • Uniwersalna</p>
+                        <p class="card__text">Zbalansowana mieszanka o pełnym body...</p>
+                        <ul class="card__list">
+                            <li>Profil: kakao, przyprawy</li>
+                            <li>Uniwersalna do każdej metody</li>
+                            <li>250 g / 500 g / 1 kg</li>
+                        </ul>
+                    </article>
+                
+                    <article class="card">
+                        <h3 class="card__title">Elephant Alternative</h3>
+                        <p class="card__tag">Etiopia • Metody alternatywne</p>
+                        <p class="card__text">Owocowa, kwiatowa, jaśniej palona...</p>
+                        <ul class="card__list">
+                            <li>Profil: owoce, kwiaty</li>
+                            <li>Idealna do przelewu</li>
+                            <li>250 g / 500 g</li>
+                        </ul>
+                    </article>
+                
+                    <article class="card">
+                        <h3 class="card__title">Zestaw Degustacyjny</h3>
+                        <p class="card__tag">3 × 100 g • Idealny na start</p>
+                        <p class="card__text">Zestaw trzech różnych kaw...</p>
+                        <ul class="card__list">
+                            <li>Classic / Balance / Alternative</li>
+                            <li>Iidealny jako prezent</li>
+                            <li>3×100 g</li>
+                        </ul>
+                    </article>
+                
+                    <article class="card">
+                        <h3 class="card__title">Elephant To Go</h3>
+                        <p class="card__tag">Drip Bags • Kawa na szybko</p>
+                        <p class="card__text">Wygodne saszetki drip bez sprzętu...</p>
+                        <ul class="card__list">
+                            <li>Gotowe w 2–3 minuty</li>
+                            <li>Wystarczy kubek i gorąca woda</li>
+                            <li>Zestawy 5 / 10 / 20</li>
+                        </ul>
+                    </article>
                 </div>
-            </section>
-
-            <!-- O NAS -->
-            <section id="onas" class="section section--about">
-                <div class="container section__inner">
-                    <header class="section__header">
-                        <p class="section__eyebrow">O nas</p>
-                        <h2 class="section__title">Palarnia kawy ze Słubic</h2>
-                        <p class="section__description">
-                            Elephant Coffee to mała, rzemieślnicza palarnia kawy, w której każdy wypał
-                            powstaje w krótkich seriach. Dzięki temu każda paczka jest świeża,
-                            dopracowana i dopasowana do Twojego sposobu parzenia.
-                        </p>
-                    </header>
-                </div>
-            </section>
-
-            <!-- NASZE KAWY -->
-            <section id="kawy" class="section section--coffees">
-                <div class="container section__inner">
-                    <header class="section__header">
-                        <p class="section__eyebrow">Nasze kawy</p>
-                        <h2 class="section__title">Trzy linie, jeden słoń</h2>
-                        <p class="section__description">
-                            Wybierz profil, który najlepiej pasuje do Ciebie i Twojej kuchni — od klasycznej
-                            kawy do ekspresu po alternatywy pełne owoców i kwiatów.
-                        </p>
-                    </header>
-
-                    <div class="coffees">
-                        <article class="coffee-card coffee-card--classic">
-                            <h3 class="coffee-card__title">Elephant Classic</h3>
-                            <p class="coffee-card__subtitle">Klasyczna Brazylia pod ekspres</p>
-                            <p class="coffee-card__notes">
-                                Czekolada, orzechy, karmel. Stabilna, „bezpieczna” kawa do codziennego picia
-                                w ekspresie ciśnieniowym lub kawiarce.
-                            </p>
-                        </article>
-
-                        <article class="coffee-card coffee-card--balance">
-                            <h3 class="coffee-card__title">Elephant Balance</h3>
-                            <p class="coffee-card__subtitle">Mieszanka Brasil &amp; India</p>
-                            <p class="coffee-card__notes">
-                                Zbalansowana kompozycja pod ekspres i kawę „do kubka”. Słodycz, pełne body,
-                                gładki posmak — idealna kawa dla domowych gości.
-                            </p>
-                        </article>
-
-                        <article class="coffee-card coffee-card--alt">
-                            <h3 class="coffee-card__title">Elephant Alternative</h3>
-                            <p class="coffee-card__subtitle">Ethiopia pod metody alternatywne</p>
-                            <p class="coffee-card__notes">
-                                Kwiaty, brzoskwinia, mleczna czekolada. Profil tworzony z myślą o dripie,
-                                przelewie, AeroPressie i innych alternatywnych metodach.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ZAMÓW -->
-            <section id="zamow" class="section section--order">
-                <div class="container section__inner">
-                    <header class="section__header">
-                        <p class="section__eyebrow">Zamów</p>
-                        <h2 class="section__title">Jak zamówić kawę Elephant Coffee</h2>
-                        <p class="section__description">
-                            Palimy kawę pod zamówienia. Napisz do nas, a dobierzemy odpowiednią kawę,
-                            stopień mielenia i termin odbioru lub wysyłki.
-                        </p>
-                    </header>
-
-                    <!-- здесь потом можно вставить форму -->
-                    <div class="order-info">
-                        <ol class="order-steps">
-                            <li>Wybierz kawę (Classic, Balance, Alternative).</li>
-                            <li>Napisz do nas lub złóż zamówienie przez formularz.</li>
-                            <li>Umówimy odbiór w Słubicach lub wyślemy paczkę kurierem / Paczkomatem.</li>
-                        </ol>
-
-                        <a href="mailto:twojmail@elephantcoffee.shop" class="btn btn--primary">
-                            Napisz i zamów kawę
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ALLEGRO -->
-            <section id="allegro" class="section section--allegro">
-                <div class="container section__inner">
-                    <header class="section__header">
-                        <p class="section__eyebrow">Allegro</p>
-                        <h2 class="section__title">Wolisz zamówić przez Allegro?</h2>
-                        <p class="section__description">
-                            Nasze kawy znajdziesz także na Allegro. To wygodna opcja, jeśli lubisz mieć
-                            wszystko w jednym miejscu i korzystasz z Allegro Smart.
-                        </p>
-                    </header>
-
-                    <a href="https://allegro.pl" class="btn btn--ghost" target="_blank" rel="noopener">
-                        Zamów na Allegro
-                    </a>
-                </div>
-            </section>
-
-            <!-- GRA -->
-            <section id="gra" class="section section--game">
-                <div class="container section__inner">
-                    <header class="section__header">
-                        <p class="section__eyebrow">Gra</p>
-                        <h2 class="section__title">Graj i łap słonie!</h2>
-                        <p class="section__description">
-                            Przygotowaliśmy małą grę — złap jak najwięcej słoni i zgarnij rabat na kawę.
-                            Traktuj to jako zabawę i dodatkowy bonus dla miłośników Elephant Coffee.
-                        </p>
-                    </header>
-
-                    <a href="./gra/index.html" class="btn btn--primary">
-                        Zagraj teraz
-                    </a>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- FOOTER -->
-        <footer class="site-footer">
-            <div class="container footer__inner">
-                <p class="footer__brand">Elephant Coffee &copy; <span class="footer__year">2025</span></p>
-                <p class="footer__meta">
-                    Rzemieślnicza palarnia kawy • Słubice, Polska
-                </p>
             </div>
-        </footer>
+        </section>
 
-    </div>
+        <!-- HOW TO ORDER -->
+        <section class="section section--order" id="order">
+            <div class="container section__inner section__inner--split">
+                <div class="section__content">
+                    <h2 class="section__title">Jak zamówić kawę</h2>
+                    <p class="section__text">
+                        Zamówienie kawy z Elephant Coffee jest proste. Wypełnij krótki formularz, a my
+                        odezwiemy się do Ciebie, żeby potwierdzić szczegóły i termin odbioru / wysyłki.
+                    </p>
 
-    <!-- если захочешь, потом подключим js для меню и формы -->
-    <!-- <script src="./js/main.js"></script> -->
+                    <ol class="steps">
+                        <li class="steps__item">
+                            <h3 class="steps__title">1. Wybierz kawę</h3>
+                            <p class="steps__text">
+                                Zdecyduj, który profil smakowy najbardziej Ci pasuje i w jakiej formie parzysz kawę.
+                            </p>
+                        </li>
+                        <li class="steps__item">
+                            <h3 class="steps__title">2. Wypełnij formularz</h3>
+                            <p class="steps__text">
+                                Podaj ilość, sposób mielenia i preferowaną formę odbioru lub dostawy.
+                            </p>
+                        </li>
+                        <li class="steps__item">
+                            <h3 class="steps__title">3. Potwierdzenie</h3>
+                            <p class="steps__text">
+                                Skontaktujemy się z Tobą, żeby potwierdzić zamówienie, termin oraz szczegóły płatności.
+                            </p>
+                        </li>
+                        <li class="steps__item">
+                            <h3 class="steps__title">4. Odbierz świeżą kawę</h3>
+                            <p class="steps__text">
+                                Twoja kawa zostanie wypalona, odpocznie kilka dni i będzie gotowa do odbioru lub
+                                wysyłki.
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- ORDER FORM -->
+                <div class="section__aside">
+                    <form class="form" action="#" method="post">
+                        <h3 class="form__title">Formularz zamówienia</h3>
+
+                        <label class="form__field">
+                            <span class="form__label">Imię i nazwisko*</span>
+                            <input type="text" name="name" required placeholder="Jan Kowalski">
+                        </label>
+
+                        <label class="form__field">
+                            <span class="form__label">E-mail*</span>
+                            <input type="email" name="email" required placeholder="twoj@mail.com">
+                        </label>
+
+                        <label class="form__field">
+                            <span class="form__label">Telefon</span>
+                            <input type="tel" name="phone" placeholder="+48 ...">
+                        </label>
+
+                        <label class="form__field">
+                            <span class="form__label">Rodzaj kawy*</span>
+                            <select name="coffee" required>
+                                <option value="" disabled selected>Wybierz kawę</option>
+                                <option value="classic">Elephant Classic</option>
+                                <option value="balance">Elephant Balance</option>
+                                <option value="alternative">Elephant Alternative</option>
+                                <option value="mix">Zestaw / mix</option>
+                            </select>
+                        </label>
+
+                        <label class="form__field">
+                            <span class="form__label">Mielenie*</span>
+                            <select name="grind" required>
+                                <option value="" disabled selected>Wybierz opcję</option>
+                                <option value="beans">Ziarno</option>
+                                <option value="espresso">Do ekspresu</option>
+                                <option value="moka">Do kawiarki</option>
+                                <option value="filter">Do przelewu</option>
+                                <option value="frenchpress">Do French pressu</option>
+                                <option value="cezve">Do tygielka (kawa po turecku)</option>
+                            </select>
+                        </label>
+
+                        <label class="form__field">
+                            <span class="form__label">Ilość (g)*</span>
+                            <input type="number" name="amount" min="100" step="50" required placeholder="np. 500">
+                        </label>
+
+                        <label class="form__field">
+                            <span class="form__label">Sposób odbioru</span>
+                            <select name="delivery">
+                                <option value="" disabled selected>Wybierz opcję</option>
+                                <option value="pickup">Odbiór osobisty w Słubicach</option>
+                                <option value="city-delivery">Dostawa na terenie Słubic</option>
+                                <option value="parcel">Wysyłka paczkomatem / kurierem</option>
+                            </select>
+                        </label>
+
+                        <label class="form__field">
+                            <span class="form__label">Uwagi do zamówienia</span>
+                            <textarea name="message" rows="4"
+                                placeholder="Np. preferowany termin, szczegóły adresu..."></textarea>
+                        </label>
+
+                        <label class="form__checkbox">
+                            <input type="checkbox" name="rodo" required>
+                            <span class="form__checkbox-text">
+                                Wyrażam zgodę na kontakt w sprawie realizacji zamówienia zgodnie z polityką prywatności.
+                            </span>
+                        </label>
+
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Wyślij zamówienie
+                        </button>
+
+                        <p class="form__note">
+                            *Pola obowiązkowe. Formularz wysyła zapytanie — potwierdzimy zamówienie mailowo lub
+                            telefonicznie.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS -->
+        <section class="section section--reviews" id="reviews">
+            <div class="container">
+                <header class="section__header">
+                    <h2 class="section__title">Co mówią nasi klienci</h2>
+                    <p class="section__subtitle">
+                        Najważniejsze dla nas jest to, żeby kawa naprawdę smakowała na co dzień, nie tylko na zdjęciach.
+                    </p>
+                </header>
+
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section section--contact" id="contact">
+            <div class="container section__inner section__inner--split">
+                <div class="section__content">
+                    <h2 class="section__title">Kontakt</h2>
+                    <p class="section__text">
+                        Masz pytania o kawę, chcesz zamówić większą ilość do biura lub lokalu,
+                        albo po prostu pogadać o dobrym espresso?
+                    </p>
+                    <p class="section__text">
+                        Napisz lub zadzwoń — chętnie doradzimy i pomożemy dobrać kawę do Twojego sprzętu.
+                    </p>
+
+                    <ul class="contact-list">
+                        <li class="contact-list__item">
+                            <span class="contact-list__label">E-mail:</span>
+                            <a href="mailto:hello@elephantcoffee.shop" class="contact-list__link">
+                                hello@elephantcoffee.shop
+                            </a>
+                        </li>
+                        <li class="contact-list__item">
+                            <span class="contact-list__label">Telefon:</span>
+                            <a href="tel:+48" class="contact-list__link">
+                                +48 ...
+                            </a>
+                        </li>
+                        <li class="contact-list__item">
+                            <span class="contact-list__label">Lokalizacja:</span>
+                            <span class="contact-list__value">Słubice, Polska</span>
+                        </li>
+                    </ul>
+
+                    <div class="contact-social">
+                        <p class="contact-social__label">Znajdziesz nas także tutaj:</p>
+                        <div class="contact-social__links">
+                            <a href="#" class="contact-social__link">Instagram</a>
+                            <a href="#" class="contact-social__link">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section__aside">
+                    <p class="section__note">
+                        W przyszłości w tym miejscu może pojawić się mapa dojazdu lub zdjęcia
+                        z naszej przestrzeni palarni i miejsca odbioru kawy.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p class="footer__copy">
+                © <span id="year"></span> Elephant Coffee. Wszelkie prawa zastrzeżone.
+            </p>
+            <a href="#home" class="footer__link">Powrót na górę</a>
+        </div>
+    </footer>
+
 </body>
 
 </html>

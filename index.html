@@ -7,7 +7,7 @@
     <title>Elephant Coffee — Rzemieślnicza palarnia kawy ze Słubic</title>
     <meta name="description"
         content="Elephant Coffee — mała rzemieślnicza palarnia kawy ze Słubic. Świeżo palone ziarna, małe partie, indywidualne zamówienia. Zamów świeżą kawę prosto od palarni.">
-    <link rel="stylesheet" href="./css/styles.css">
+   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
@@ -25,7 +25,8 @@
                     <li class="nav__item"><a href="#about" class="nav__link">O nas</a></li>
                     <li class="nav__item"><a href="#coffee" class="nav__link">Kawa</a></li>
                     <li class="nav__item"><a href="#order" class="nav__link">Jak zamówić</a></li>
-                    <li class="nav__item"><a href="#reviews" class="nav__link">Zagraj w naszą grę</a></li>
+                    <li class="nav__item"><a href="#gallery" class="nav__link">Galeria</a></li>
+                    <li class="nav__item"><a href="https://elephant-coffee-game.netlify.app/" target="_blank" class="nav__link">Zagraj w naszą grę</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link nav__link--cta">Kontakt</a></li>
                 </ul>
             </nav>
@@ -52,7 +53,6 @@
                     </p>
                     <div class="hero__actions">
                         <a href="#order" class="btn btn--primary">Zamów kawę</a>
-                        <a href="#coffee" class="btn btn--ghost">Poznaj nasze mieszanki</a>
                     </div>
                     <p class="hero__note">
                         Świeże wypały: <span>co tydzień, w małych partiach</span>
@@ -60,7 +60,6 @@
                 </div>
 
                 <div class="hero__photo">
-                    <!-- Тут потом вставишь своё фото/визуал -->
                     <a href="#home" class="hero__logo-link">
                         <img src="./img/logo.png" alt="Logo Elepant Coffee" width="350" height="350">
                     </a>
@@ -119,7 +118,7 @@
                 <header class="section__header">
                     <h2 class="section__title">Nasza kawa</h2>
                     <p class="section__subtitle">
-                        Trzy linie smakowe, które tworzą serce Elephant Coffee. Idealne do ekspresu, kawiarki i metod
+                       Linie smakowe, które tworzą serce Elephant Coffee. Idealne do ekspresu, kawiarki i metod
                         alternatywnych.
                     </p>
                 </header>
@@ -182,6 +181,65 @@
                 </div>
             </div>
         </section>
+
+        <section class="section section--gallery" id="gallery">
+            <div class="container">
+                <header class="section__header section__header--center">
+                    <h2 class="section__title">Galeria Elephant Coffee</h2>
+                    <p class="section__subtitle section__subtitle--center">
+                        Chwile z naszej palarni...
+                    </p>
+                </header>
+        
+                <div class="gallery">
+                    <figure class="gallery__item">
+                        <img src="./img/gallery-1.jpg" alt="Palarnia Elephant Coffee">
+                        <figcaption>Świeżo palone ziarna w naszej palarni</figcaption>
+                    </figure>
+        
+                    <figure class="gallery__item">
+                        <img src="./img/gallery-2.jpg" alt="Opakowania Elephant Coffee">
+                        <figcaption>Precyzyjna ocena stopnia wypalenia</figcaption>
+                    </figure>
+        
+                    <figure class="gallery__item">
+                        <img src="./img/gallery-3.jpg" alt="Metody alternatywne">
+                        <figcaption>Elephant Alternative – kawa z przelewu</figcaption>
+                    </figure>
+        
+                    <figure class="gallery__item">
+                        <img src="./img/gallery-4.jpg" alt="Espresso">
+                        <figcaption>Klasyczne espresso z Elephant Classic</figcaption>
+                    </figure>
+        
+                    <figure class="gallery__item">
+                        <img src="./img/gallery-5.jpg" alt="Drip Bags">
+                        <figcaption>Elephant To Go – drip bags na szybko</figcaption>
+                    </figure>
+        
+                    <figure class="gallery__item">
+                        <img src="./img/gallery-6.jpg" alt="Latte art">
+                        <figcaption>Porcja jakości zawsze pod ręką – Elephant To Go.</figcaption>
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img src="./img/gallery-7.jpg" alt="Latte art">
+                        <figcaption>Świeżo palone ziarna w naszej palarni</figcaption>
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img src="./img/gallery-8.jpg" alt="Latte art">
+                        <figcaption>Kawa, która robi dzień lepszym</figcaption>
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img src="./img/gallery-9.jpg" alt="Latte art">
+                        <figcaption>Kawa, która robi dzień lepszym</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
 
         <!-- HOW TO ORDER -->
         <section class="section section--order" id="order">
@@ -257,11 +315,10 @@
                             <span class="form__label">Mielenie*</span>
                             <select name="grind" required>
                                 <option value="" disabled selected>Wybierz opcję</option>
-                                <option value="beans">Ziarno</option>
+                                <option value="beans">Ziarno (polecamy)</option>
                                 <option value="espresso">Do ekspresu</option>
                                 <option value="moka">Do kawiarki</option>
-                                <option value="filter">Do przelewu</option>
-                                <option value="frenchpress">Do French pressu</option>
+                                <option value="filter">Do przelewu (również do kubka)</option>
                                 <option value="cezve">Do tygielka (kawa po turecku)</option>
                             </select>
                         </label>
@@ -337,14 +394,14 @@
                     <ul class="contact-list">
                         <li class="contact-list__item">
                             <span class="contact-list__label">E-mail:</span>
-                            <a href="mailto:hello@elephantcoffee.shop" class="contact-list__link">
-                                hello@elephantcoffee.shop
+                            <a href="mailto:elephantcoffeeslubice@gmail.com" class="contact-list__link">
+                                elephantcoffeeslubice@gmail.com
                             </a>
                         </li>
                         <li class="contact-list__item">
                             <span class="contact-list__label">Telefon:</span>
-                            <a href="tel:+48" class="contact-list__link">
-                                +48 ...
+                            <a href="tel:+48570021733" class="contact-list__link">
+                                +48 570 021 733
                             </a>
                         </li>
                         <li class="contact-list__item">
@@ -356,8 +413,8 @@
                     <div class="contact-social">
                         <p class="contact-social__label">Znajdziesz nas także tutaj:</p>
                         <div class="contact-social__links">
-                            <a href="#" class="contact-social__link">Instagram</a>
-                            <a href="#" class="contact-social__link">Facebook</a>
+                            <a href="https://www.instagram.com/_elephant_coffee_/" target="_blank" class="contact-social__link">Instagram</a>
+                            <a href="https://share.google/y2qfDMYEeNHcjsWsg" target="_blank" class="contact-social__link">Facebook</a>
                         </div>
                     </div>
                 </div>

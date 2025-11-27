@@ -209,7 +209,7 @@ body {
 .nav__list {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 18px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -219,7 +219,7 @@ body {
     position: relative;
         color: rgba(233, 214, 195, 0.75);
         font-size: 13px;
-        letter-spacing: 0.14em;
+        letter-spacing: 0.10em;
         text-transform: uppercase;
         padding: 4px 2px;
         transition: color 0.25s ease;
@@ -462,7 +462,9 @@ padding: 10px 24px;
 .hero__photo {
     flex: 1;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    position: relative;
+    /* <── обязательный момент */
     animation: hero_photo 2.5s ease-in-out .1s forwards;
     filter: drop-shadow(0 0 14px rgba(255, 215, 179, 0.18)) drop-shadow(0 0 32px rgba(255, 215, 179, 0.10));
     transition: filter 0.4s ease;
@@ -470,6 +472,44 @@ padding: 10px 24px;
 
 .hero__photo:hover {
     filter: drop-shadow(0 0 20px rgba(255, 215, 179, 0.32)) drop-shadow(0 0 40px rgba(255, 215, 179, 0.18));
+}
+
+/* Лучики */
+.hero__photo::before {
+    content: "";
+    position: absolute;
+    inset: -40px;
+    background: radial-gradient(circle,
+            rgba(255, 230, 200, 0.18) 0%,
+            rgba(255, 230, 200, 0.10) 40%,
+            rgba(255, 230, 200, 0) 70%);
+    opacity: 0;
+    border-radius: 50%;
+    filter: blur(12px);
+    transition: opacity 0.6s ease;
+    animation: rays 35s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+    /* на всякий случай */
+}
+
+.hero__photo:hover {
+    filter: drop-shadow(0 0 20px rgba(255, 215, 179, 0.32)) drop-shadow(0 0 40px rgba(255, 215, 179, 0.18));
+}
+
+.hero__photo:hover::before {
+    opacity: 1;
+}
+
+/* медленное вращение «лучей» */
+@keyframes rays {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1.05);
+    }
 }
 
 @keyframes hero_photo {
@@ -550,27 +590,66 @@ padding: 10px 24px;
 }
 
 .btn--primary {
-    background: var(--accent);
-    color: #1b140f;
-    border-color: rgba(255, 215, 179, 0.8);
-    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+    padding: 12px 30px;
+        border-radius: 999px;
+    
+        /* шампанский градиент */
+        background: linear-gradient(135deg,
+                rgba(255, 238, 215, 0.85) 0%,
+                rgba(255, 227, 195, 0.85) 50%,
+                rgba(255, 215, 179, 0.85) 100%);
+    
+        color: #1c120b;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+    
+        border: 1px solid rgba(255, 215, 179, 0.65);
+    
+        /* стеклянный эффект */
+        backdrop-filter: blur(12px) saturate(160%);
+        -webkit-backdrop-filter: blur(12px) saturate(160%);
+    
+        /* мягкое свечение */
+        box-shadow:
+            0 0 18px rgba(255, 230, 200, 0.45),
+            inset 0 0 14px rgba(255, 240, 220, 0.45);
+    
+        transition: all 0.35s ease;
+
+    animation-delay: .25s;
+    animation: btnFadeIn 3.5s ease-in .1s forwards;
+    /* легкая задержка, чтобы выглядело дорого */
+}
+
+@keyframes btnFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-5px) scale(0.9);
+        filter: blur(3px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
 }
 
 .btn--primary:hover {
-    background: #ffe0bf;
-    transform: translateY(-1px);
+    background: linear-gradient(135deg,
+                rgba(255, 241, 225, 0.95),
+                rgba(255, 230, 205, 0.95),
+                rgba(255, 217, 182, 0.95));
+    
+        box-shadow:
+            0 0 26px rgba(255, 235, 210, 0.55),
+            inset 0 0 18px rgba(255, 240, 220, 0.65);
+    
+        transform: translateY(-2px) scale(1.02);
+        border-color: rgba(255, 215, 179, 0.8);
 }
 
-.btn--ghost {
-    background: transparent;
-    color: var(--text);
-    border-color: var(--border-soft);
-}
-
-.btn--ghost:hover {
-    background: rgba(255, 255, 255, 0.03);
-    border-color: rgba(255, 215, 179, 0.5);
-}
 
 .btn--full {
     width: 100%;
@@ -638,7 +717,7 @@ padding: 10px 24px;
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
     margin-top: 32px;
 
@@ -650,18 +729,31 @@ padding: 10px 24px;
 
 .card {
     border-radius: 22px;
-    padding: 22px 20px;
+    padding: 26px 24px;
+    /* чуть больше воздуха */
     background: linear-gradient(145deg, #111319, #07080c);
     border: 1px solid var(--border-soft);
     box-shadow: 0 22px 55px rgba(0, 0, 0, 0.55);
     display: flex;
     flex-direction: column;
     height: 100%;
+    transition: transform .3s ease,
+        /* плавный hover */
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+/* лёгкий премиальный hover (можешь убрать, если не нужен) */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 28px 65px rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 215, 179, 0.35);
 }
 
 .card__title {
     margin: 0 0 6px;
     font-size: 18px;
+    line-height: 1.3;
 }
 
 .card__tag {
@@ -673,21 +765,122 @@ padding: 10px 24px;
 }
 
 .card__text {
-    margin: 0 0 16px;
+    margin: 0 0 18px;
     color: var(--text-muted);
     font-size: 14px;
+    line-height: 1.5;
     flex-grow: 1;
-    /* растягивает текст чтобы кнопки были снизу */
+    /* классно, пусть остаётся */
 }
 
 .card__list {
     margin: 0;
-    padding-left: 16px;
+    padding-left: 18px;
+    /* чуть ровнее отступ */
     color: var(--text-muted);
     font-size: 13px;
+    line-height: 1.5;
     display: flex;
     flex-direction: column;
     gap: 4px;
+    list-style: disc;
+    /* явное указание маркеров */
+    list-style-position: outside;
+}
+
+
+/* Gallery */
+.section__header--center {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.section__subtitle--center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Галерея */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+@media (max-width: 992px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Карточка фото */
+.gallery__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #0f1114;
+    /* цвет под твой фон */
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 400px;
+}
+
+/* Само изображение */
+.gallery__item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transform: scale(1.04);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Лёгкая плёнка сверху */
+.gallery__item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255, 215, 179, 0.22), transparent 55%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+/* Подпись */
+.gallery__item figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 14px 18px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.0));
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Hover-эффект — премиум */
+.gallery__item:hover img {
+    transform: scale(1.08);
+    opacity: 0.95;
+}
+
+.gallery__item:hover::before {
+    opacity: 1;
+}
+
+.gallery__item:hover figcaption {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* ==========

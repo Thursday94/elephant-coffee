@@ -16,6 +16,7 @@
     <header class="header">
         <div class="container header__inner">
             <a href="#home" class="logo">
+                <img class="logo__image" src="./img/logo.png" alt="Elephant Coffee">
                 <span class="logo__mark">Elephant</span>
                 <span class="logo__text">Coffee</span>
             </a>
@@ -41,47 +42,47 @@
 
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
+        <video class="hero__video" autoplay muted loop playsinline aria-hidden="true">
+            <source src="./video/coffee.mp4" type="video/mp4">
+        </video>
+    
+        <div class="hero__overlay"></div>
+    
         <div class="container hero__inner">
             <div class="hero__content">
-                <h1 class="hero__title">
-                    Świeżo palona kawa.<br>
-                    Prosto ze Słubic.
+                <h1 id="hero-title" class="hero__title">
+                    Freshly roasted coffee.<br>
+                    From Slubice.
                 </h1>
-                    <p class="hero__subtitle">
-                        Małe partie, świeży wypał i starannie dobrane ziarna.<br>
-                        Od espresso po przelew.
-                    </p>
+    
+                <p class="hero__subtitle">
+                    Small batches, freshly roasted beans, and carefully selected coffee.
+                </p>
+    
                 <div class="hero__actions">
-                    <a href="#order" class="btn btn--primary">Odwiedź nas</a>
+                    <a href="#order" class="btn btn--primary">Visit Us</a>
                 </div>
             </div>
-
-                <div class="hero__photo">
-                    <a href="#home" class="hero__logo-link">
-                        <img src="./img/logo.png" alt="Logo Elepant Coffee" width="300" height="300">
-                    </a>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
         <!-- ABOUT -->
         <section class="section section--about" id="about">
             <div class="container section__inner section__inner--split">
                 <div class="section__content">
                     <h2 class="section__title">Kim jesteśmy</h2>
-                
+                    
                     <p class="section__text">
                         Elephant Coffee to rzemieślnicza palarnia kawy ze Słubic, stworzona z pasji do jakości i świadomego podejścia do
-                        kawy.
+                        smaku.
                     </p>
-                
+                    
                     <p class="section__text">
-                        Wypalamy kawę w małych, kontrolowanych partiach — od selekcji zielonych ziaren, przez profil palenia, aż po
-                        odpoczynek i pakowanie.
+                        Wypalamy kawę w małych, kontrolowanych partiach, dbając o każdy detal — od zielonego ziarna aż po gotowy wypał.
                     </p>
-                
+                    
                     <p class="section__text">
-                        Każde zamówienie przygotowujemy indywidualnie, dbając o świeżość, powtarzalność i smak w każdej filiżance.
+                        Od espresso po przelew — chcemy, aby każda filiżanka smakowała dokładnie tak, jak powinna.
                     </p>
                 </div>
                 </div>
@@ -136,30 +137,6 @@
         </div>
     </div>
 </section>
-
-                <div class="section__aside">
-                    <ul class="feature-list">
-                        <li class="feature-list__item">
-                            <h3 class="feature-list__title">Świeże wypały</h3>
-                            <p class="feature-list__text">
-                                Kawa palona na kilka dni przed dostawą, z czasem na spokojną degazację.
-                            </p>
-                        </li>
-                        <li class="feature-list__item">
-                            <h3 class="feature-list__title">Małe partie</h3>
-                            <p class="feature-list__text">
-                                Każdy profil dopracowujemy ręcznie, pod konkretne metody parzenia.
-                            </p>
-                        </li>
-                        <li class="feature-list__item">
-                            <h3 class="feature-list__title">Indywidualne mielenie</h3>
-                            <p class="feature-list__text">
-                                Mielimy kawę pod ekspres, kawiarkę, przelew, French press lub tygielek – jeśli tego
-                                potrzebujesz.
-                            </p>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </section>
 
@@ -177,12 +154,17 @@
                 <div class="cards">
                     <article class="card">
                         <h3 class="card__title">Elephant Classic</h3>
-                        <p class="card__tag">Brazylia • Espresso & Kawiarka</p>
-                        <p class="card__text">Klasyczna, czekoladowo-orzechowa kawa...</p>
+                        <p class="card__tag">Brazylia 100%</p>
+                        <p class="card__text">Medium Roast – kawa o czekoladowo-orzechowym charakterze i niskiej kwasowości.<br>
+                                                Idealna dla tych, którzy nie lubią kwaśnej kawy.
+                        </p>
+                        <p class="card__text">Profil: czekolada, orzechy</p>
+                        <p class="card__text">Cena:</p>
                         <ul class="card__list">
-                            <li>Profil: czekolada, orzechy</li>
-                            <li>Idealna do espresso</li>
-                            <li>250 g / 500 g / 1 kg</li>
+                            <li>100 g </li>
+                            <li>250 g </li>
+                            <li>500 g </li>
+                            <li> 1 kg</li>
                         </ul>
                     </article>
                 
@@ -304,7 +286,7 @@
         </section>
 
 
-        <!-- HOW TO ORDER -->
+        <!-- HOW TO ORDER 
         <section class="section section--order" id="order">
             <div class="container section__inner section__inner--split">
                 <div class="section__content">
@@ -341,9 +323,9 @@
                             </p>
                         </li>
                     </ol>
-                </div>
+                </div> -->
 
-                <!-- ORDER FORM -->
+                <!-- ORDER FORM 
                 <div class="section__aside">
                     <form class="form" action="#" method="post">
                         <h3 class="form__title">Formularz zamówienia</h3>
@@ -426,33 +408,12 @@
                 </div>
             </div>
         </section>
-
-        <!-- REVIEWS -->
-        <section class="section section--reviews" id="reviews">
-            <div class="container">
-                <header class="section__header">
-                    <h2 class="section__title">Co mówią nasi klienci</h2>
-                    <p class="section__subtitle">
-                        Najważniejsze dla nas jest to, żeby kawa naprawdę smakowała na co dzień, nie tylko na zdjęciach.
-                    </p>
-                </header>
-
-
-            </div>
-        </section>
-
+        -->
         <!-- CONTACT -->
         <section class="section section--contact" id="contact">
             <div class="container section__inner section__inner--split">
                 <div class="section__content">
                     <h2 class="section__title">Kontakt</h2>
-                    <p class="section__text">
-                        Masz pytania o kawę, chcesz zamówić większą ilość do biura lub lokalu,
-                        albo po prostu pogadać o dobrym espresso?
-                    </p>
-                    <p class="section__text">
-                        Napisz lub zadzwoń — chętnie doradzimy i pomożemy dobrać kawę do Twojego sprzętu.
-                    </p>
 
                     <ul class="contact-list">
                         <li class="contact-list__item">
@@ -480,13 +441,6 @@
                             <a href="https://share.google/y2qfDMYEeNHcjsWsg" target="_blank" class="contact-social__link">Facebook</a>
                         </div>
                     </div>
-                </div>
-
-                <div class="section__aside">
-                    <p class="section__note">
-                        W przyszłości w tym miejscu może pojawić się mapa dojazdu lub zdjęcia
-                        z naszej przestrzeni palarni i miejsca odbioru kawy.
-                    </p>
                 </div>
             </div>
         </section>

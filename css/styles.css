@@ -57,6 +57,24 @@ body {
     line-height: 1.6;
 }
 
+#home {
+    scroll-margin-top: 120px;
+}
+
+#about {
+    scroll-margin-top: 120px;
+}
+
+#coffee {
+    scroll-margin-top: 48px;
+}
+
+#menu {
+    scroll-margin-top: 50px;
+}
+
+
+
 /* ==========
    Layout
 ========== */
@@ -100,10 +118,6 @@ body {
 .section__aside {
     flex: 1;
 }
-
-/* ==========
-   Header
-========== */
 
 /* ===== HEADER ===== */
 
@@ -443,7 +457,7 @@ body {
 
 .hero {
     position: relative;
-    min-height: calc(100vh - 104px);
+    min-height: calc(101vh - 104px);
     /* высота экрана минус верхнее меню */
     padding: 0;
     overflow: hidden;
@@ -500,6 +514,7 @@ background: radial-gradient(circle at 88% center,
 .hero__title {
     max-width: 860px;
     margin: 0 auto;
+    margin-bottom: 18px;
     font-size: clamp(48px, 7vw, 92px);
     font-weight: 400;
     line-height: 1.02;
@@ -573,6 +588,7 @@ background: radial-gradient(circle at 88% center,
             margin-left: auto;
                 margin-right: auto;
                 margin-top: 18px;
+                margin-bottom: 60px;
     
         color: rgba(233, 224, 215, 0.88);
         /* теплый кремовый */
@@ -970,7 +986,6 @@ text-shadow:
     position: absolute;
     top: 50%;
     left: 18%;
-
     width: 520px;
     height: 520px;
 
@@ -986,12 +1001,13 @@ text-shadow:
     position: relative;
     padding-left: 0;
     max-width: 860px;
+    margin: 0 auto;
 }
 
 .section__title {
     margin: 0 0 34px;
     letter-spacing: 0.08em;
-
+    text-align: center;
     text-shadow:
         0 0 12px rgba(255, 215, 179, 0.08);
 }
@@ -1013,18 +1029,18 @@ text-shadow:
 }
 
 .section__text:nth-of-type(1) {
-    transform: translateX(0) translateY(40px);
-    animation-delay: 2s;
+    transform: translateX(0px) translateY(40px);
+    animation-delay: 1s;
 }
 
 .section__text:nth-of-type(2) {
-    transform: translateX(40px) translateY(60px);
-    animation-delay: 2.55s;
+    transform: translateX(80px) translateY(60px);
+    animation-delay: 1.5s;
 }
 
 .section__text:nth-of-type(3) {
-    transform: translateX(80px) translateY(80px);
-    animation-delay: 3s;
+    transform: translateX(100px) translateY(120px);
+    animation-delay: 2s;
 }
 
 .section__text:hover {
@@ -1045,6 +1061,36 @@ text-shadow:
         transform: translateX(0) translateY(0);
     }
 }
+
+/* ========================= Wi-Fi ======================= */
+
+.card__title_wifi {
+    font-size: 28px;
+    text-align: center;
+}
+
+.section--coffee .section__note {
+    max-width: 520px;
+    margin: 48px auto 0;
+}
+
+.section__note summary {
+    cursor: pointer;
+}
+
+.wifi-password {
+    cursor: pointer;
+}
+
+.wifi-password:hover {
+    color: #cfa676;
+}
+
+.card__title {
+    text-align: center;
+}
+
+
 
 /* ========================= Features (About) ======================= */
 
@@ -1422,7 +1468,7 @@ text-shadow:
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    font-size: 14px;
+    font-size: 24px;
 }
 
 .contact-list__label {
@@ -1443,18 +1489,18 @@ text-shadow:
 
 .contact-social__label {
     margin: 0 0 6px;
-    font-size: 13px;
+    font-size: 18px;
     color: var(--text-muted);
 }
 
 .contact-social__links {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 18px;
 }
 
 .contact-social__link {
-    font-size: 13px;
+    font-size: 16px;
     text-decoration: none;
     color: var(--text);
     opacity: 0.85;

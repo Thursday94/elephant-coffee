@@ -1091,6 +1091,77 @@ text-shadow:
 }
 
 
+/*сетится вай фай*/
+
+.section__note summary {
+    list-style: none;
+}
+
+.section__note summary::-webkit-details-marker {
+    display: none;
+}
+
+.wifi-summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.wifi-summary span {
+    font-size: 30px;
+}
+
+.wifi-icon {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #d9ad78;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    animation: wifiGlow 2.5s ease-in-out infinite;
+}
+
+.wifi-summary span {
+    background: linear-gradient(90deg,
+            #a9713a,
+            #fff1da,
+            #c58a4c,
+            #fff1da,
+            #a9713a);
+    background-size: 250% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: wifiShimmer 4s ease-in-out infinite;
+}
+
+@keyframes wifiShimmer {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes wifiGlow {
+
+    0%,
+    100% {
+        opacity: 0.65;
+        filter: drop-shadow(0 0 0 rgba(217, 173, 120, 0));
+    }
+
+    50% {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px rgba(217, 173, 120, 0.7));
+    }
+}
+
 
 /* ========================= Features (About) ======================= */
 
@@ -1185,8 +1256,9 @@ text-shadow:
 
 .card__title {
     margin: 0 0 14px;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.3;
+    text-align: center;
 }
 
 .card__tag {
@@ -1195,6 +1267,7 @@ text-shadow:
     text-transform: uppercase;
     letter-spacing: 0.16em;
     color: var(--text-muted);
+    text-align: center;
 }
 
 .card__text {
@@ -1202,13 +1275,19 @@ text-shadow:
     font-size: 14px;
     line-height: 1.5;
     flex-grow: 1;
+    text-align: center;
+}
+
+.card__text_price {
+    font-size: 14px;
+    
 }
 
 .card__list {
     margin: 0;
-    padding-left: 18px;
+    padding-left: 24px;
     color: var(--text-muted);
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.5;
     display: flex;
     flex-direction: column;
@@ -1312,6 +1391,1057 @@ text-shadow:
     transform: translateY(0);
     opacity: 1;
 }
+
+/* ======-------------------===================-----==== Coffee Helper Test -------------================--------------========== */
+
+/* =====================================================
+   BASE
+===================================================== */
+.layout {
+    transform: scale(0.85);
+    transform-origin: top center;
+
+    width: 117.65%;
+    margin-left: -8.825%;
+    margin-bottom: -90px;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #050608;
+    color: #f4efe8;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   MAIN SECTION
+===================================================== */
+
+.finder {
+    min-height: 100vh;
+
+    padding: 80px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 50% 50%,
+            rgba(190, 155, 110, .10),
+            transparent 35%),
+        #050608;
+}
+
+
+/* soft ambient glow */
+
+.finder::before {
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(circle,
+            rgba(210, 180, 140, .08),
+            transparent 65%);
+
+    filter: blur(35px);
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+    width: 100%;
+    max-width: 1150px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #968d83;
+
+    margin-bottom: 20px;
+}
+
+.title {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(25px, 7vw, 42px);
+
+    line-height: .95;
+
+    font-weight: 400;
+
+    letter-spacing: -3px;
+}
+
+.title span {
+    color: #cdb28c;
+
+    font-style: italic;
+}
+
+.subtitle {
+    max-width: 500px;
+
+    margin: 22px auto 0;
+
+    color: #85817c;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   MAIN LAYOUT
+===================================================== */
+
+.layout {
+    display: grid;
+
+    grid-template-columns:
+        1.1fr .9fr;
+
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+
+/* =====================================================
+   RADAR
+===================================================== */
+
+.radar {
+    position: relative;
+
+    min-height: 620px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    background:
+        radial-gradient(circle at center,
+            rgba(210, 180, 140, .055),
+            transparent 55%),
+        rgba(255, 255, 255, .015);
+
+    overflow: hidden;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .03);
+}
+
+
+/* large circle */
+
+.radar::before {
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255, 255, 255, .055);
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+/* small circle */
+
+.radar::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255, 255, 255, .04);
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+/* =====================================================
+   CENTER POINT
+===================================================== */
+
+.center {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 18px;
+    height: 18px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #e1c49d;
+
+    box-shadow:
+        0 0 0 7px rgba(225, 196, 157, .07),
+        0 0 35px rgba(225, 196, 157, .7);
+
+    z-index: 10;
+
+    transition:
+        left 1s cubic-bezier(.22, 1, .36, 1),
+        top 1s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* animated pulse */
+
+.center::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    border:
+        1px solid #d9bd95;
+
+    animation:
+        pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+        opacity: .8;
+    }
+
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+
+}
+
+
+/* =====================================================
+   CONNECTING LINES
+===================================================== */
+
+.line {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 45%;
+    height: 1px;
+
+    transform-origin: left center;
+
+    background:
+        linear-gradient(90deg,
+            rgba(210, 184, 145, .32),
+            transparent);
+
+    opacity: .55;
+
+    z-index: 1;
+}
+
+.line.top {
+    transform: rotate(-45deg);
+}
+
+.line.right {
+    transform: rotate(45deg);
+}
+
+.line.bottom {
+    transform: rotate(135deg);
+}
+
+.line.left {
+    transform: rotate(225deg);
+}
+
+
+/* =====================================================
+   COFFEE CARDS
+===================================================== */
+
+.coffee {
+    position: absolute;
+
+    width: 175px;
+
+    padding: 18px;
+
+    border-radius: 18px;
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    background:
+        rgba(255, 255, 255, .025);
+
+    backdrop-filter: blur(15px);
+
+    text-align: center;
+
+    z-index: 4;
+
+    transition:
+        transform .8s cubic-bezier(.22, 1, .36, 1),
+        border-color .5s,
+        box-shadow .5s,
+        background .5s;
+}
+
+
+/* hover */
+
+.coffee:hover {
+    border-color:
+        rgba(210, 184, 145, .35);
+
+    background:
+        rgba(210, 184, 145, .045);
+}
+
+
+/* active coffee */
+
+.coffee.active {
+    border-color:
+        rgba(220, 190, 145, .75);
+
+    background:
+        rgba(210, 180, 140, .09);
+
+    box-shadow:
+        0 0 45px rgba(210, 180, 140, .10),
+        inset 0 0 25px rgba(210, 180, 140, .03);
+
+    transform:
+        scale(1.08);
+}
+
+
+/* =====================================================
+   COFFEE POSITIONS
+===================================================== */
+
+
+/* LEFT */
+
+.coffee.classic {
+
+    left: 7%;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+}
+
+.coffee.active.classic {
+
+    transform:
+        translateY(-50%) scale(1.08);
+}
+
+
+/* RIGHT */
+
+.coffee.balance {
+
+    right: 7%;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+}
+
+.coffee.active.balance {
+
+    transform:
+        translateY(-50%) scale(1.08);
+}
+
+
+/* TOP */
+
+.coffee.alternative {
+
+    left: 50%;
+    top: 7%;
+
+    transform:
+        translateX(-50%);
+}
+
+.coffee.active.alternative {
+
+    transform:
+        translateX(-50%) scale(1.08);
+}
+
+
+/* BOTTOM */
+
+.coffee.special {
+
+    left: 50%;
+    bottom: 7%;
+
+    transform:
+        translateX(-50%);
+}
+
+.coffee.active.special {
+
+    transform:
+        translateX(-50%) scale(1.08);
+}
+
+
+/* =====================================================
+   COFFEE TEXT
+===================================================== */
+
+.coffee-small {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #8d867e;
+
+    margin-bottom: 10px;
+}
+
+.coffee-name {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    margin-bottom: 7px;
+}
+
+.coffee-type {
+
+    font-size: 10px;
+
+    color: #77716b;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   QUESTION BOX
+===================================================== */
+
+.question-box {
+
+    border-radius: 30px;
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, .035),
+            rgba(255, 255, 255, .012));
+
+    padding: 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .025);
+}
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.progress {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 50px;
+}
+
+.progress-line {
+
+    height: 2px;
+
+    flex: 1;
+
+    background:
+        rgba(255, 255, 255, .08);
+
+    overflow: hidden;
+}
+
+.progress-fill {
+
+    width: 20%;
+
+    height: 100%;
+
+    background: #d4b78d;
+
+    box-shadow:
+        0 0 15px #d4b78d;
+
+    transition:
+        width .7s cubic-bezier(.22, 1, .36, 1);
+}
+
+.progress-number {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #858079;
+}
+
+
+/* =====================================================
+   QUESTION ANIMATION
+===================================================== */
+
+.question {
+
+    animation:
+        questionAnimation .6s cubic-bezier(.22, 1, .36, 1);
+}
+
+@keyframes questionAnimation {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+.question h2 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 39px;
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    margin:
+        0 0 13px;
+
+    letter-spacing: -1px;
+}
+
+.question p {
+
+    color: #77736e;
+
+    font-size: 13px;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   ANSWERS
+===================================================== */
+
+.answers {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 35px;
+}
+
+.answer {
+
+    min-height: 105px;
+
+    padding: 20px;
+
+    text-align: left;
+
+    background:
+        rgba(255, 255, 255, .025);
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 15px;
+
+    color: #eee8df;
+
+    cursor: pointer;
+
+    transition:
+        transform .35s,
+        border-color .35s,
+        background .35s,
+        box-shadow .35s;
+}
+
+.answer:hover {
+
+    border-color:
+        rgba(210, 184, 145, .45);
+
+    background:
+        rgba(210, 184, 145, .05);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .2);
+}
+
+.answer.selected {
+
+    background:
+        rgba(210, 184, 145, .11);
+
+    border-color:
+        #cdb28c;
+
+    box-shadow:
+        0 0 25px rgba(205, 178, 140, .08);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =====================================================
+   ANSWER CONTENT
+===================================================== */
+
+.icon {
+
+    font-size: 22px;
+
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+.answer-title {
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.answer-description {
+
+    font-size: 10px;
+
+    color: #77736e;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   NEXT BUTTON
+===================================================== */
+
+.next {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 17px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #e3ccb0;
+
+    color: #211912;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform .3s,
+        box-shadow .3s,
+        opacity .3s;
+}
+
+.next:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(225, 196, 157, .2);
+}
+
+.next:disabled {
+
+    opacity: .25;
+
+    cursor: default;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =====================================================
+   RESULT
+===================================================== */
+
+.result {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    animation:
+        resultAnimation 1s cubic-bezier(.22, 1, .36, 1);
+}
+
+@keyframes resultAnimation {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.9) translateY(25px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1) translateY(0);
+    }
+
+}
+
+.result-label {
+
+    color: #8f877e;
+
+    letter-spacing: 4px;
+
+    font-size: 10px;
+}
+
+.result h2 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 58px;
+
+    font-weight: 400;
+
+    color: #d6bb94;
+
+    margin:
+        15px 0;
+}
+
+.result p {
+
+    max-width: 500px;
+
+    margin: auto;
+
+    color: #858079;
+
+    line-height: 1.7;
+}
+
+.restart {
+
+    margin-top: 30px;
+
+    padding:
+        13px 25px;
+
+    border:
+        1px solid rgba(255, 255, 255, .15);
+
+    background: transparent;
+
+    color: #ddd;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.restart:hover {
+
+    background: #e3ccb0;
+
+    color: #211912;
+
+    border-color: #e3ccb0;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .layout {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .radar {
+
+        min-height: 520px;
+
+    }
+
+    .question-box {
+
+        padding: 30px 25px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 550px) {
+
+    .finder {
+
+        padding:
+            55px 12px;
+    }
+
+    .header {
+
+        margin-bottom: 35px;
+    }
+
+    .title {
+
+        letter-spacing: -2px;
+    }
+
+    .radar {
+
+        min-height: 480px;
+
+        border-radius: 22px;
+    }
+
+    .radar::before {
+
+        width: 330px;
+        height: 330px;
+    }
+
+    .radar::after {
+
+        width: 200px;
+        height: 200px;
+    }
+
+    .coffee {
+
+        width: 135px;
+
+        padding: 13px;
+    }
+
+    .coffee-name {
+
+        font-size: 16px;
+    }
+
+    .coffee-type {
+
+        font-size: 9px;
+    }
+
+    .coffee.classic {
+
+        left: 2%;
+    }
+
+    .coffee.balance {
+
+        right: 2%;
+    }
+
+    .coffee.alternative {
+
+        top: 4%;
+    }
+
+    .coffee.special {
+
+        bottom: 4%;
+    }
+
+    .question-box {
+
+        padding:
+            25px 18px;
+
+        border-radius: 22px;
+    }
+
+    .question h2 {
+
+        font-size: 31px;
+    }
+
+    .answers {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .result h2 {
+
+        font-size: 42px;
+    }
+
+}
+
 
 /* ==========
    Steps (How to order)
@@ -1682,24 +2812,60 @@ text-shadow:
     object-fit: contain;
 }
 
-/* ==========
-   Responsive
-========== */
+/* ==========   --------------------------Responsive------------------------------========== */
+/* =====================================================
+   АДАПТИВ: планшеты
+===================================================== */
 
 @media (max-width: 960px) {
-    .hero__inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 40px;
+    .container {
+        padding-inline: 24px;
     }
 
-    .hero__photo {
-        width: 100%;
-        justify-content: flex-start;
+    .section {
+        padding: 64px 0;
+    }
+
+    .header__inner {
+        gap: 14px;
+    }
+
+    .nav__list {
+        gap: 12px;
+    }
+
+    .nav__link {
+        font-size: 13px;
+    }
+
+    .hero,
+    .hero__inner {
+        min-height: calc(100svh - 92px);
+    }
+
+    .hero__title {
+        font-size: clamp(42px, 7vw, 62px);
     }
 
     .cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .location__content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .location__info {
+        max-width: none;
+    }
+
+    .location__map {
+        margin-right: 0;
+    }
+
+    .location__map iframe {
+        height: 360px;
     }
 
     .reviews {
@@ -1708,48 +2874,316 @@ text-shadow:
 
     .section__inner--split {
         flex-direction: column;
+        gap: 28px;
+    }
+
+    .social-btn,
+    .scroll-top {
+        right: 20px;
     }
 }
 
-@media (max-width: 720px) {
-    .header__inner {
+
+/* =====================================================
+   АДАПТИВ: телефоны
+===================================================== */
+
+@media (max-width: 640px) {
+    html {
+        scroll-padding-top: 130px;
+    }
+
+    .container {
         padding-inline: 16px;
     }
 
-    .nav__list {
-        gap: 14px;
+    .section {
+        padding: 52px 0;
     }
 
-    .hero {
-        padding-top: 56px;
+    /* Верхняя панель и навигация */
+    .header__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 0;
+        gap: 8px 12px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo__image {
+        width: 42px;
+        height: 42px;
+    }
+
+    .logo__mark,
+    .logo__text {
+        font-size: 16px;
+        letter-spacing: 0.12em;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .nav__list {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px 12px;
+    }
+
+    .nav__link {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .nav__link--cta {
+        padding: 6px 10px;
+    }
+
+    /* Первый экран */
+    .hero,
+    .hero__inner {
+        min-height: calc(100svh - 118px);
+    }
+
+    .hero__content {
+        padding-block: 64px;
     }
 
     .hero__title {
-        font-size: 32px;
+        font-size: clamp(34px, 10vw, 46px);
+        line-height: 1.08;
     }
 
     .hero__subtitle {
-        max-width: none;
+        font-size: 16px;
     }
 
+    .btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Общие заголовки */
+    .section__title {
+        font-size: clamp(30px, 9vw, 40px);
+        line-height: 1.15;
+    }
+
+    .section__subtitle,
+    .section__text {
+        font-size: 15px;
+    }
+
+    /* Карточки кофе */
     .cards {
         grid-template-columns: 1fr;
+        gap: 16px;
     }
 
-    .reviews {
+    .card {
+        padding: 22px 18px;
+        border-radius: 18px;
+    }
+
+    .card__title {
+        font-size: 22px;
+    }
+
+    /* Локация */
+    .location__content {
+        margin-top: 28px;
+        gap: 28px;
+    }
+
+    .location__map {
+        padding: 8px;
+        border-radius: 18px;
+    }
+
+    .location__map iframe {
+        height: 280px;
+        border-radius: 12px;
+    }
+
+    .hours-row {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .hours-row span:last-child {
+        text-align: right;
+    }
+
+    /* Тест кофе */
+    .finder {
+        padding: 52px 0;
+    }
+
+    .finder .header {
+        margin-bottom: 32px;
+    }
+
+    .finder .title {
+        font-size: clamp(30px, 10vw, 42px);
+        letter-spacing: -2px;
+    }
+
+    .finder .subtitle {
+        font-size: 14px;
+    }
+
+    .radar {
+        min-height: 420px;
+        border-radius: 20px;
+    }
+
+    .radar::before {
+        width: 290px;
+        height: 290px;
+    }
+
+    .radar::after {
+        width: 180px;
+        height: 180px;
+    }
+
+    .coffee {
+        width: 118px;
+        padding: 11px 8px;
+        border-radius: 14px;
+    }
+
+    .coffee-name {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .coffee.classic {
+        left: 2%;
+    }
+
+    .coffee.balance {
+        right: 2%;
+    }
+
+    .coffee.alternative {
+        top: 4%;
+    }
+
+    .coffee.special {
+        bottom: 4%;
+    }
+
+    .question-box {
+        padding: 24px 16px;
+        border-radius: 20px;
+    }
+
+    .progress {
+        margin-bottom: 32px;
+    }
+
+    .question h2 {
+        font-size: 28px;
+    }
+
+    .answers {
         grid-template-columns: 1fr;
+        margin-top: 24px;
     }
 
-    .section {
-        padding: 56px 0;
+    .answer {
+        min-height: auto;
+        padding: 16px;
     }
 
-    .form {
-        padding: 18px 16px;
+    .result {
+        padding: 30px 8px;
+    }
+
+    .result h2 {
+        font-size: 38px;
+    }
+
+    /* Kontakt i stopka */
+    .contact-list__item {
+        font-size: 16px;
     }
 
     .footer__inner {
         flex-direction: column;
         align-items: flex-start;
+        gap: 8px;
+    }
+
+    /* Pływające przyciski */
+    .social-btn,
+    .scroll-top {
+        right: 14px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .facebook-btn {
+        bottom: 178px;
+    }
+
+    .instagram-btn {
+        bottom: 128px;
+    }
+
+    .allegro-btn {
+        bottom: 78px;
+    }
+
+    .scroll-top {
+        bottom: 18px;
+    }
+}
+
+
+/* =====================================================
+   MAŁE TELEFONY: 360 px i mniej
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .logo__mark,
+    .logo__text {
+        font-size: 14px;
+    }
+
+    .nav__list {
+        gap: 5px 9px;
+    }
+
+    .nav__link {
+        font-size: 11px;
+    }
+
+    .hero__title {
+        font-size: 33px;
+    }
+
+    .hours-row {
+        font-size: 13px;
+    }
+
+    .radar {
+        min-height: 390px;
+    }
+
+    .coffee {
+        width: 105px;
+        font-size: 12px;
+    }
+
+    .coffee-name {
+        font-size: 13px;
     }
 }

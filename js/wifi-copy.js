@@ -1,4 +1,9 @@
 const wifiPassword = document.querySelector(".wifi-password");
+const wifiDetails = document.getElementById("wifi");
+
+if (window.location.hash === "#wifi" && wifiDetails) {
+    wifiDetails.open = true;
+}
 
 if (wifiPassword) {
     wifiPassword.addEventListener("click", function () {

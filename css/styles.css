@@ -2826,8 +2826,13 @@ body {
         padding: 64px 0;
     }
 
+        .header {
+            z-index: 100;
+        }
+
     .header__inner {
         gap: 14px;
+        position: relative;
     }
 
     .nav__list {
@@ -2887,6 +2892,14 @@ body {
 /* =====================================================
    АДАПТИВ: телефоны
 ===================================================== */
+
+@media (min-width: 641px) {
+    .nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
 
 @media (max-width: 640px) {
     html {
@@ -3122,11 +3135,26 @@ body {
     }
 
     /* Pływające przyciski */
+
+/* На телефонах навигация снова идёт отдельной строкой */
+@media (max-width: 640px) {
+    .nav {
+        position: static;
+        transform: none;
+    }
+
+    .nav__list {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
     .social-btn,
     .scroll-top {
         right: 14px;
         width: 42px;
         height: 42px;
+        z-index: 200;
     }
 
     .facebook-btn {

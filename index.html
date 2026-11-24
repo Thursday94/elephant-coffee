@@ -87,55 +87,176 @@
                 </div>
                 </section>
 
-<!-- LOCATION -->
-<section class="section location" id="location">
-    <div class="container">
-        <header class="section__header">
-            <h2 class="section__title">Jak do nas trafić</h2>
-            <p class="section__subtitle">
-                Jesteśmy na miejscu — wpadnij na kawę lub odbierz swoje zamówienie.
-            </p>
-        </header>
-
-        <div class="location__content">
-
-            <!-- ЛЕВАЯ ЧАСТЬ -->
-                <div class="location__info">
-                    <p class="location__name">Elephant Coffee</p>
-                    <p class="location__address">ul. Jedności Robotniczej 16/2A, Słubice</p>
-                    <p class="location__status" id="shop-status">
-                        ● Sprawdzanie...
-                    </p>
+                <!---------------------- coffee test     ---------------------------->
                 
-                    <div class="location__hours-list">
-                        <div class="hours-row"><span>Poniedziałek :</span><span>10:00 – 17:00</span></div>
-                        <div class="hours-row"><span>Wtorek :</span><span>nieczynne</span></div>
-                        <div class="hours-row"><span>Środa :</span><span>09:00 – 17:00</span></div>
-                        <div class="hours-row"><span>Czwartek :</span><span>09:00 – 17:00</span></div>
-                        <div class="hours-row"><span>Piątek :</span><span>09:00 – 17:00</span></div>
-                        <div class="hours-row"><span>Sobota :</span><span>10:00 – 17:00</span></div>
-                        <div class="hours-row"><span>Niedziela :</span><span>10:00 – 17:00</span></div>
+                <section class="finder">
+                
+                    <div class="container">
+                
+                        <!-- HEADER -->
+                
+                        <div class="header">
+                
+                            <h1 class="title">
+                                Znajdź swoją kawę.
+                            </h1>
+                
+                            <p class="subtitle">
+                                Odpowiedz na kilka pytań.
+                                Zobacz, w którą stronę prowadzi
+                                Twój smak.
+                            </p>
+                
+                        </div>
+                
+                
+                        <!-- MAIN -->
+                
+                        <div class="layout">
+                
+                
+                            <!-- COFFEE RADAR -->
+                
+                            <div class="radar">
+                
+                                <!-- connecting lines -->
+                
+                                <div class="line top"></div>
+                                <div class="line right"></div>
+                                <div class="line bottom"></div>
+                                <div class="line left"></div>
+                
+                
+                                <!-- moving center -->
+                
+                                <div class="center" id="center">
+                                </div>
+                
+                
+                                <!-- COFFEE 01 -->
+                
+                                <div class="coffee classic" id="classic">
+                
+                                    <div class="coffee-name">
+                                        Elephant Classic
+                                    </div>
+                
+                                </div>
+                
+                
+                                <!-- COFFEE 02 -->
+                
+                                <div class="coffee balance" id="balance">
+                
+                                    <div class="coffee-name">
+                                        Elephant Balance
+                                    </div>
+                
+                                </div>
+                
+                
+                                <!-- COFFEE 03 -->
+                
+                                <div class="coffee alternative" id="alternative">
+                
+                
+                
+                                    <div class="coffee-name">
+                                        Elephant Alternative
+                                    </div>
+                
+                                </div>
+                
+                
+                                <!-- COFFEE 04 -->
+                
+                                <div class="coffee special" id="special">
+                
+                
+                                    <div class="coffee-name">
+                                        Elephant <br> Dark
+                                    </div>
+                
+                                </div>
+                
+                            </div>
+                
+                
+                            <!-- QUESTIONS -->
+                
+                            <div class="question-box">
+                
+                                <div id="quiz">
+                
+                                    <!-- PROGRESS -->
+                
+                                    <div class="progress">
+                
+                                        <div class="progress-line">
+                
+                                            <div class="progress-fill" id="progress">
+                                            </div>
+                
+                                        </div>
+                
+                                        <div class="progress-number" id="counter">
+                                            01 / 05
+                                        </div>
+                
+                                    </div>
+                
+                
+                                    <!-- QUESTION -->
+                
+                                    <div class="question" id="question">
+                                    </div>
+                
+                
+                                    <!-- ANSWERS -->
+                
+                                    <div class="answers" id="answers">
+                                    </div>
+                
+                
+                                    <!-- NEXT -->
+                
+                                    <button class="next" id="next" disabled onclick="nextQuestion()">
+                
+                                        DALEJ →
+                
+                                    </button>
+                
+                                </div>
+                
+                
+                                <!-- RESULT -->
+                
+                                <div class="result" id="result">
+                
+                                    <div class="result-label">
+                                        TWÓJ PROFIL SMAKOWY
+                                    </div>
+                
+                                    <h2 id="resultName"></h2>
+                
+                                    <p id="resultDescription"></p>
+                
+                                    <button class="restart" onclick="restart()">
+                
+                                        SPRÓBUJ PONOWNIE
+                
+                                    </button>
+                
+                                </div>
+                
+                            </div>
+                
+                        </div>
+                
                     </div>
                 
-                    <div class="location__actions">
-                        <a href="https://maps.app.goo.gl/KrE2zt5ZkVbH53NS7" target="_blank" class="btn btn--primary">
-                            Nawiguj do nas
-                        </a>
-                    </div>
-                </div>
+                </section>
 
-            <!-- ПРАВАЯ ЧАСТЬ -->
-            <div class="location__map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.1231785982263!2d14.556348111363558!3d52.35005114868256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4707a36a22f4f295%3A0x8cea1978b9dd4cf9!2sPalarnia%20Kawy%20Elephant%20Coffee!5e0!3m2!1sru!2spl!4v1775501579548!5m2!1sru!2spl"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-
-        </div>
-    </div>
-</section>
 
         <!-- COFFEE / OFFER -->
         <section class="section section--coffee" id="coffee">
@@ -159,7 +280,7 @@
                             <li>100 g - <strong>12 zł</strong></li>
                             <li>250 g - <strong>26 zł</strong></li>
                             <li>500 g - <strong>50 zł</strong></li>
-                            <li> 1 kg - <strong>96 zł</strong></li>
+                            <li> 1 kg - <strong>94 zł</strong></li>
                         </ul>
                     </article>
                 
@@ -175,7 +296,7 @@
                             <li>100 g - <strong>14 zł</strong></li>
                             <li>250 g - <strong>28 zł</strong></li>
                             <li>500 g - <strong>52 zł</strong></li>
-                            <li> 1 kg - <strong>98 zł</strong></li>
+                            <li> 1 kg - <strong>96 zł</strong></li>
                         </ul>
                     </article>
                 
@@ -188,220 +309,92 @@
                         <p class="card__text">Stopień palenia: 9/10</p>
                         <p class="card__text_price">Cena:</p>
                         <ul class="card__list">
-                            <li>100 g - <strong>12 zł</strong></li>
-                            <li>250 g - <strong>28 zł</strong></li>
-                            <li>500 g - <strong>50 zł</strong></li>
-                            <li> 1 kg - <strong>96 zł</strong></li>
+                            <li>100 g - <strong>14 zł</strong></li>
+                            <li>250 g - <strong>30 zł</strong></li>
+                            <li>500 g - <strong>54 zł</strong></li>
+                            <li> 1 kg - <strong>98 zł</strong></li>
                         </ul>
                     </article>
 
                     <article class="card">
                         <h3 class="card__title">Elephant Alternative</h3>
-                        <p class="card__tag">Ethiopia West Arsi<br> 100% Arabica</p>
-                        <p class="card__text">Jasne palenie – lekka, kawa z wyraźniejszą, soczystą kwasowością. Palona specjalnie z myślą o
-                            metodach
-                            przelewowych, aby wydobyć z ziaren świeżość, złożoność i delikatne aromaty. <br> <br>Idealna do V60 i
-                            AeroPressu.<br><br>
+                        <p class="card__tag">Wyjątkowe ziarna • 100% Arabica</p>
+                    
+                        <p class="card__text">
+                            Odkrywaj świat kawy specialty razem z nami!
+                            Regularnie wprowadzamy nowe ziarna z różnych zakątków świata,
+                            starannie wyselekcjonowane ze względu na ich wyjątkowy charakter
+                            i niepowtarzalne profile smakowe.
+                            <br><br>
+                            Nasza oferta stale się zmienia, dlatego zawsze możesz
+                            odkryć coś nowego.
+                            <br><br>
+                            <p class="card__text">Stopień palenia: 5/10</p>
+                            <strong>Zapytaj nas o aktualnie dostępne kawy!</strong>
                         </p>
-                        <p class="card__text">Profil: owoce pestkowe, czarna herbata</p>
-                        <p class="card__text">Stopień palenia: 5/10</p>
-                        <p class="card__text_price">Cena:</p>
-                        <ul class="card__list">
-                            <li>100 g - <strong>12 zł</strong></li>
-                            <li>250 g - <strong>28 zł</strong></li>
-                            <li>500 g - <strong>50 zł</strong></li>
-                            <li> 1 kg - <strong>96 zł</strong></li>
-                        </ul>
                     </article>
+
                 
                 
                     <article class="card">
                         <h3 class="card__title">Elephant To Go</h3>
-                        <p class="card__tag">Ethiopia West Arsi<br> 100% Arabica</p>
+                        <p class="card__tag"> 100% Arabica</p>
                         <p class="card__text">Świeżo palona kawa w formie drip baga – wystarczy kubek i gorąca woda. Saszetkę wystarczy zawiesić na filiżance i powoli
-                        przelać wodą.<br><br>Idealna do domu, pracy i podróży – świeża kawa bez ekspresu i dodatkowego sprzętu.</p>
-                        <p class="card__text">Profil: owoce pestkowe, czarna herbata</p>
-                        <p class="card__text">Stopień palenia: 5/10</p>
-                        <p class="card__text_price">Cena:</p>
-                        <ul class="card__list">
-                            <li>100 g - <strong>12 zł</strong></li>
-                            <li>250 g - <strong>28 zł</strong></li>
-                            <li>500 g - <strong>50 zł</strong></li>
-                            <li> 1 kg - <strong>96 zł</strong></li>
-                        </ul>
+                        przelać wodą.<br><br><br>Idealna do domu, pracy i podróży – świeża kawa bez ekspresu i dodatkowego sprzętu.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-                    <!---------------------- coffee test     ---------------------------->
 
-        <section class="finder">
-        
+        <!-- LOCATION -->
+        <section class="section location" id="location">
             <div class="container">
-        
-                <!-- HEADER -->
-        
-                <div class="header">
-        
-                    <h1 class="title">
-                        Znajdź swoją kawę.
-                    </h1>
-        
-                    <p class="subtitle">
-                        Odpowiedz na kilka pytań.
-                        Zobacz, w którą stronę prowadzi
-                        Twój smak.
+                <header class="section__header">
+                    <h2 class="section__title">Jak do nas trafić</h2>
+                    <p class="section__subtitle">
+                        Jesteśmy na miejscu — wpadnij na kawę lub odbierz swoje zamówienie.
                     </p>
+                </header>
         
-                </div>
+                <div class="location__content">
         
+                    <!-- ЛЕВАЯ ЧАСТЬ -->
+                    <div class="location__info">
+                        <p class="location__name">Elephant Coffee</p>
+                        <p class="location__address">ul. Jedności Robotniczej 16/2A, Słubice</p>
+                        <p class="location__status" id="shop-status">
+                            ● Sprawdzanie...
+                        </p>
         
-                <!-- MAIN -->
-        
-                <div class="layout">
-        
-        
-                    <!-- COFFEE RADAR -->
-        
-                    <div class="radar">
-        
-                        <!-- connecting lines -->
-        
-                        <div class="line top"></div>
-                        <div class="line right"></div>
-                        <div class="line bottom"></div>
-                        <div class="line left"></div>
-        
-        
-                        <!-- moving center -->
-        
-                        <div class="center" id="center">
+                        <div class="location__hours-list">
+                            <div class="hours-row"><span>Poniedziałek :</span><span>10:00 – 17:00</span></div>
+                            <div class="hours-row"><span>Wtorek :</span><span>nieczynne</span></div>
+                            <div class="hours-row"><span>Środa :</span><span>09:00 – 17:00</span></div>
+                            <div class="hours-row"><span>Czwartek :</span><span>09:00 – 17:00</span></div>
+                            <div class="hours-row"><span>Piątek :</span><span>09:00 – 17:00</span></div>
+                            <div class="hours-row"><span>Sobota :</span><span>10:00 – 17:00</span></div>
+                            <div class="hours-row"><span>Niedziela :</span><span>10:00 – 17:00</span></div>
                         </div>
         
-        
-                        <!-- COFFEE 01 -->
-        
-                        <div class="coffee classic" id="classic">
-        
-                            <div class="coffee-name">
-                                Elephant Classic
-                            </div>
-        
+                        <div class="location__actions">
+                            <a href="https://maps.app.goo.gl/KrE2zt5ZkVbH53NS7" target="_blank" class="btn btn--primary">
+                                Nawiguj do nas
+                            </a>
                         </div>
-        
-        
-                        <!-- COFFEE 02 -->
-        
-                        <div class="coffee balance" id="balance">
- 
-                            <div class="coffee-name">
-                                Elephant Balance
-                            </div>
-
-                        </div>
-        
-        
-                        <!-- COFFEE 03 -->
-        
-                        <div class="coffee alternative" id="alternative">
-        
-
-        
-                            <div class="coffee-name">
-                                Elephant Alternative
-                            </div>
-        
-                        </div>
-        
-        
-                        <!-- COFFEE 04 -->
-        
-                        <div class="coffee special" id="special">
-        
-        
-                            <div class="coffee-name">
-                                Elephant <br> Dark
-                            </div>
-        
-                        </div>
-        
                     </div>
         
-        
-                    <!-- QUESTIONS -->
-        
-                    <div class="question-box">
-        
-                        <div id="quiz">
-        
-                            <!-- PROGRESS -->
-        
-                            <div class="progress">
-        
-                                <div class="progress-line">
-        
-                                    <div class="progress-fill" id="progress">
-                                    </div>
-        
-                                </div>
-        
-                                <div class="progress-number" id="counter">
-                                    01 / 05
-                                </div>
-        
-                            </div>
-        
-        
-                            <!-- QUESTION -->
-        
-                            <div class="question" id="question">
-                            </div>
-        
-        
-                            <!-- ANSWERS -->
-        
-                            <div class="answers" id="answers">
-                            </div>
-        
-        
-                            <!-- NEXT -->
-        
-                            <button class="next" id="next" disabled onclick="nextQuestion()">
-        
-                                DALEJ →
-        
-                            </button>
-        
-                        </div>
-        
-        
-                        <!-- RESULT -->
-        
-                        <div class="result" id="result">
-        
-                            <div class="result-label">
-                                TWÓJ PROFIL SMAKOWY
-                            </div>
-        
-                            <h2 id="resultName"></h2>
-        
-                            <p id="resultDescription"></p>
-        
-                            <button class="restart" onclick="restart()">
-        
-                                SPRÓBUJ PONOWNIE
-        
-                            </button>
-        
-                        </div>
-        
+                    <!-- ПРАВАЯ ЧАСТЬ -->
+                    <div class="location__map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.1231785982263!2d14.556348111363558!3d52.35005114868256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4707a36a22f4f295%3A0x8cea1978b9dd4cf9!2sPalarnia%20Kawy%20Elephant%20Coffee!5e0!3m2!1sru!2spl!4v1775501579548!5m2!1sru!2spl"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
         
                 </div>
-        
             </div>
-        
         </section>
 
         <!--<section class="section section--gallery" id="gallery">
@@ -599,25 +592,25 @@
                         <h3 class="card__title">Kawa</h3>
                         <ul class="card__list">
                             <li>Espresso Doppio — <strong>8 zł</strong> (36 ml)</li>
-                            <li>Espresso Macchiato — <strong></strong>10 zł</strong> (48 ml)</li>
+                            <li>Espresso Macchiato — <strong>10 zł</strong> (48 ml)</li>
                             <li>Lungo — <strong>10 zł</strong> (70 ml)</li>
                             <li>Americano — <strong>10 zł</strong> (200 ml)</li>
-                            <li>Americano Duże — <strong>14 zł</strong> (400 ml)</li>
+                            <li>Americano Duże — <strong>17 zł</strong> (400 ml)</li>
                             <li>Americano z mlekiem — <strong>12 zł</strong> (200 ml)</li>
                             <li>Cortado — <strong>12 zł</strong> (120 ml)</li>
-                            <li>Flat White — <strong>14 zł</strong> (240 ml)</li>
-                            <li>Cappuccino — <strong>15 zł</strong> (250 ml)</li>
-                            <li>Cappuccino Duże — <strong>17 zł</strong> (400 ml)</li>
-                            <li>Latte — <strong>18 zł</strong> (400 ml)</li>
-                            <li>Mokka — <strong>16 zł</strong> (250 ml)</li>
-                            <li>AeroPress — <strong>16 zł</strong> (250 ml)</li>
-                            <li>V60 — <strong>18 zł</strong> (300 ml)</li>
+                            <li>Flat White — <strong>15 zł</strong> (240 ml)</li>
+                            <li>Cappuccino — <strong>16 zł</strong> (250 ml)</li>
+                            <li>Cappuccino Duże — <strong>18 zł</strong> (400 ml)</li>
+                            <li>Latte — <strong>17 zł</strong> (400 ml)</li>
+                            <li>Mokka — <strong>18 zł</strong> (250 ml)</li>
+                            <li>AeroPress — <strong>18 zł</strong> (250 ml)</li>
+                            <li>V60 — <strong>20 zł</strong> (300 ml)</li>
                         </ul>
 
                         <br>
 
                         <ul class="card__list">
-                            <li>Mleko roślinne: <strong>+3 zł</strong></li>
+                            <li>Mleko roślinne: <strong>+2 zł</strong></li>
                             <li>Syrop do kawy: <strong>bezpłatnie</strong></li>
                         </ul>
 
@@ -626,13 +619,13 @@
                         <h3 class="card__title">Kawa na zimno</h3>
                     
                         <ul class="card__list">
-                            <li>Cold Brew — <strong>16 zł</strong> (250 ml)</li>
+                            <li>Cold Brew — <strong>18 zł</strong> (250 ml)</li>
                             <li>Ice Latte — <strong>18 zł</strong> (400 ml)</li>
                             <li>Ice Latte małe — <strong>16 zł</strong> (250 ml)</li>
-                            <li>Tonic Espresso — <strong>16 zł</strong> (250 ml)</li>
-                            <li>Espresso Orange — <strong>18 zł</strong> (250 ml)</li>
+                            <li>Tonic Espresso — <strong>18 zł</strong> (250 ml)</li>
+                            <li>Espresso Orange — <strong>22 zł</strong> (250 ml)</li>
                             <li>Ice Americano — <strong>12 zł</strong> (250 ml)</li>
-                            <li>Ice Americano Duże — <strong>14 zł</strong> (400 ml)</li>
+                            <li>Ice Americano duże — <strong>18 zł</strong> (400 ml)</li>
                         </ul>
 
                     </article>
@@ -641,9 +634,8 @@
                         <h3 class="card__title">Nie kawa</h3>
                     
                         <ul class="card__list">
-                            <li>Woda (szklanka)  — <strong>4 zł</strong> (200 ml)</li>
                             <li>Kakao — <strong>16 zł</strong> (250 ml)</li>
-                            <li>Gorąca czekolada — <strong>18 zł</strong> (250 ml)</li>
+                            <li>Gorąca czekolada — <strong>20 zł</strong> (250 ml)</li>
                             <li>Świeżo wyciskany sok — <strong>18 zł</strong> (300 ml)</li>
                             <li>Babyccino — <strong>8 zł</strong> (250 ml)</li>
                             <li>Cascara mała — <strong>15 zł</strong> (350 ml)</li>
@@ -654,8 +646,8 @@
                     <article class="card">
                         <h3 class="card__title">Menu Sezonowe</h3>
                         <ul class="card__list">
-                            <li>Lawendowe latte — <strong>22 zł</strong> (400 ml)</li>
-                            <li>Dyniowe latte — <strong>20 zł</strong> (400 ml)</li>
+                            <li>Lawendowe latte — <strong>24 zł</strong> (400 ml)</li>
+                            <li>Dyniowe latte — <strong>24 zł</strong> (400 ml)</li>
                             <li>Piernikowe latte — <strong>22 zł</strong> (400 ml)</li>
                             <li>Crème brûlée latte — <strong>24 zł</strong> (400 ml)</li>
                         </ul>
